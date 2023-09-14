@@ -3,10 +3,12 @@
 :root {
   --shadow: 0 2px 5px rgba(0,0,0,0.3);
   --white: rgb(255, 255, 255);
-  --black: rgb(34, 40, 49);
+  --black: rgb(2, 2, 2);
+  --lightblack: rgb(34, 40, 49);
   --darkgrey: rgb(57, 62, 70);
   --teal: rgb(0, 173, 181);
   --lightgrey: rgb(238, 238, 238);
+  --purple: rgb(185, 100, 203);
 }
 
 *,
@@ -22,11 +24,28 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: 'Roboto Flex', sans-serif;
   font-size: 1rem;
   color: var(--teal);
   background-image: url(images/background.jpg);
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: var(--black);
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 1.1rem;
+  background: var(--purple);
+  color: var(--black);
 }
