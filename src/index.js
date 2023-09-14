@@ -1,1 +1,3 @@
-console.log('Testing!');
+import initializePage from "./initial";
+
+initializePage();
