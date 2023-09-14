@@ -31,7 +31,7 @@ body {
   color: var(--teal);
   background-image: url(images/background.jpg);
   background-color: var(--black);
-  background-size: 100%;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
 }
