@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
   --shadow: 0 2px 5px rgba(0,0,0,0.3);
   --white: rgb(255, 255, 255);
   --black: rgb(2, 2, 2);
   --lightblack: rgb(34, 40, 49);
   --darkgrey: rgb(57, 62, 70);
-  --teal: rgb(0, 173, 181);
+  --blue: rgb(131, 210, 240);
   --lightgrey: rgb(238, 238, 238);
   --purple: rgb(185, 100, 203);
 }
@@ -26,14 +28,68 @@
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'Roboto Flex', sans-serif;
-  font-size: 1rem;
-  color: var(--teal);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: var(--black);
   background-image: url(images/background.jpg);
   background-color: var(--black);
-  background-size: 60%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  background-position-y: 55%;
+}
+
+.header {
+  background: radial-gradient(circle, var(--blue) 0%, var(--purple) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.store-name {
+  padding-top: 10px;
+  font-size: 3.5rem;
+}
+
+.store-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  gap: 4rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  margin-left: 30px;
+  height: fit-content;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+button:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+  transition: 0.3s ease;
+  bottom: 2px;
+}
+
+button:active {
+  top: 2px;
 }
 
 footer {
@@ -45,7 +101,7 @@ footer {
   gap: 10px;
   width: 100%;
   padding: 10px 0px;
-  font-size: 1.1rem;
-  background: var(--purple);
+  font-size: 1.3rem;
+  background: radial-gradient(circle, var(--blue) 0%, var(--purple) 60%);
   color: var(--black);
 }
