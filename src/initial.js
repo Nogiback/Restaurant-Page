@@ -1,3 +1,5 @@
+import createHome from "./home";
+
 function createHeader () {
   
   const header = document.createElement("header");
@@ -73,13 +75,11 @@ function createFooter () {
 }
 
 function initializePage() {
-  // const content = document.getElementById("content");
-
-  // content.appendChild(createHeader());
-  // content.appendChild(createFooter());
+  const content = document.getElementById("content");
 
   document.body.appendChild(createHeader());
   document.body.appendChild(createFooter());
+  content.appendChild(createHome());
 }
 
 export default initializePage;

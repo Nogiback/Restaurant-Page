@@ -7,7 +7,6 @@
   --white: rgb(255, 255, 255);
   --black: rgb(2, 2, 2);
   --lightblack: rgb(34, 40, 49);
-  --darkgrey: rgb(57, 62, 70);
   --blue: rgb(131, 210, 240);
   --lightgrey: rgb(238, 238, 238);
   --purple: rgb(185, 100, 203);
@@ -33,10 +32,10 @@ body {
   color: var(--black);
   background-image: url(images/background.jpg);
   background-color: var(--black);
-  background-size: 50%;
+  background-size: 900px;
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: 55%;
+  background-position-y: 65%;
 }
 
 .header {
@@ -46,6 +45,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .title {
@@ -90,6 +91,34 @@ button:hover {
 
 button:active {
   top: 2px;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  color: var(--blue);
+  background-color: rgba(0,0,0,0.4);
+  gap: 32rem;
+}
+
+.homepage h1 {
+  padding-top: 9rem;
+  font-size: 3rem;
+
+}
+
+.homepage p {
+  width: 22rem;
+}
+
+.homepage:hover {
+  background-color: rgba(0,0,0,0.0);
+  transition: 0.9s ease;
 }
 
 footer {
