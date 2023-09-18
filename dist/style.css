@@ -28,7 +28,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--black);
   background-image: url(images/background.jpg);
   background-color: var(--black);
@@ -41,8 +41,7 @@ body {
 .header {
   background: radial-gradient(circle, var(--blue) 0%, var(--purple) 60%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   position: absolute;
@@ -53,25 +52,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.2rem;
+  min-width: fit-content;
+  padding: 10px;
 }
 
 .store-name {
-  padding-top: 10px;
-  font-size: 3.5rem;
+  padding-top: 7px;
+  font-size: 2.5rem;
 }
 
 .store-logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 .nav {
   display: flex;
+  font-size: 1.5rem;
   gap: 4rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   margin-left: 30px;
+  margin-right: 30px;
   height: fit-content;
 }
 
@@ -83,8 +85,8 @@ button {
 }
 
 button:hover {
-  color: var(--purple);
-  border-color: var(--purple);
+  color: var(--blue);
+  border-color: var(--blue);
   transition: 0.3s ease;
   bottom: 2px;
 }
@@ -102,23 +104,31 @@ button:active {
   width: 100vw;
   height: 100vh;
   color: var(--blue);
-  background-color: rgba(0,0,0,0.4);
-  gap: 32rem;
+  background-color: rgba(0,0,0,0.5);
+  gap: 30rem;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .homepage h1 {
-  padding-top: 9rem;
+  padding-top: 4rem;
   font-size: 3rem;
-
 }
 
 .homepage p {
   width: 22rem;
+  font-size: 1.5rem;
 }
 
 .homepage:hover {
-  background-color: rgba(0,0,0,0.0);
-  transition: 0.9s ease;
+  animation-name: breathe; 
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes breathe {
+  from {background-color: rgba(0,0,0,0.5);}
+  to {background-color: rgba(0,0,0,0.0);}
 }
 
 footer {

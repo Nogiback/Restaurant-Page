@@ -1,4 +1,5 @@
-import createHome from "./home";
+import loadHome from "./home";
+import navController from "./index";
 
 function createHeader () {
   
@@ -28,16 +29,25 @@ function createHeader () {
   homeBtn.classList.add("nav-btn");
   homeBtn.setAttribute("id", "home-btn");
   homeBtn.textContent = "HOME";
+  homeBtn.addEventListener("click", (e) => {
+    navController(e.target.id);
+  });
 
   const menuBtn = document.createElement("button");
   menuBtn.classList.add("nav-btn");
   menuBtn.setAttribute("id", "menu-btn");
   menuBtn.textContent = "MENU";
+  menuBtn.addEventListener("click", (e) => {
+    navController(e.target.id);
+  });
 
   const contactBtn = document.createElement("button");
   contactBtn.classList.add("nav-btn");
   contactBtn.setAttribute("id", "contact-btn");
   contactBtn.textContent = "CONTACT";
+  contactBtn.addEventListener("click", (e) => {
+    navController(e.target.id);
+  });
 
   navBar.appendChild(homeBtn);
   navBar.appendChild(menuBtn);
@@ -75,11 +85,9 @@ function createFooter () {
 }
 
 function initializePage() {
-  const content = document.getElementById("content");
-
   document.body.appendChild(createHeader());
   document.body.appendChild(createFooter());
-  content.appendChild(createHome());
+  loadHome();
 }
 
 export default initializePage;
