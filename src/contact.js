@@ -5,9 +5,6 @@ function createContact() {
   contactPage.classList.add("contactpage");
   infoBlock.classList.add("info");
 
-  const title = document.createElement("h1");
-  title.textContent = "Contact Us"
-
   const locationBlock = document.createElement("div");
   const locationTitle = document.createElement("h2");
   const address = document.createElement("p");
