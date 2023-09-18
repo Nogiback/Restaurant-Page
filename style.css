@@ -38,6 +38,13 @@ body {
   background-position-y: 60%;
 }
 
+@keyframes breathe {
+  from {background-color: rgba(0,0,0,0.6);}
+  to {background-color: rgba(0,0,0,0.0);}
+}
+
+/*------------------------------------ HEADER -----------------------------------------*/
+
 .header {
   background: radial-gradient(circle, var(--blue) 0%, var(--purple) 60%);
   display: flex;
@@ -95,6 +102,8 @@ button:active {
   top: 2px;
 }
 
+/*------------------------------------- HOMEPAGE ----------------------------------------*/
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -123,10 +132,102 @@ button:active {
   font-size: 1.5rem;
 }
 
-@keyframes breathe {
-  from {background-color: rgba(0,0,0,0.6);}
-  to {background-color: rgba(0,0,0,0.0);}
+/*------------------------------------- MENU PAGE ---------------------------------------*/
+
+.menupage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 1rem;
+  width: 100vw;
+  height: 100vh;
+  color: var(--blue);
+  background-color: rgba(0,0,0,0.5);
 }
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.8);
+  padding: 1rem;
+  border: 1px solid var(--purple);
+  min-width: 400px;
+  min-height: 300px;
+  position: relative;
+  gap: 2rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 15px 5px var(--purple);
+}
+
+.menu-item img {
+  width: 150px;
+  height: 225px;
+}
+
+.menu-item h2 {
+  position: absolute;
+  top: 0;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.menu-item ul {
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.menu-item li {
+  font-size: 1.3rem;
+}
+
+#cold-items img,
+#slush-items img {
+  width: 130px;
+  height: 205px;
+}
+
+/*----------------------------------- CONTACT PAGE --------------------------------------*/
+
+.contactpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10rem;
+  width: 100vw;
+  height: 100vh;
+  color: var(--blue);
+  background-color: rgba(0, 0, 0);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5rem;
+  font-size: 3rem;
+}
+
+.location h2,
+.contact h2,
+.hours h2{
+  text-decoration: underline;
+}
+
+.location p,
+.contact p,
+.hours p {
+  font-size: 1.5rem;
+}
+
+/*------------------------------------ FOOTER -----------------------------------------*/
 
 footer {
   position: fixed;
@@ -140,4 +241,26 @@ footer {
   font-size: 1.3rem;
   background: radial-gradient(circle, var(--blue) 0%, var(--purple) 60%);
   color: var(--black);
+}
+
+/*----------------------------------- RESPONSIVE DESIGN --------------------------------*/
+
+@media screen and (max-width: 1130px) {
+  .info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .contactpage {
+    gap: 5rem;
+  }
+
+  .location p,
+  .contact p,
+  .hours p {
+  font-size: 1.5rem;
+}
 }
