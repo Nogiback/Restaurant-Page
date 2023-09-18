@@ -35,7 +35,7 @@ body {
   background-size: 900px;
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: 65%;
+  background-position-y: 60%;
 }
 
 .header {
@@ -112,8 +112,8 @@ button:active {
 }
 
 .homepage h1 {
-  padding-top: 4rem;
-  font-size: 3rem;
+  padding-top: 2rem;
+  font-size: 5rem;
 }
 
 .homepage p {
