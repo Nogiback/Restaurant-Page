@@ -12,9 +12,9 @@ function navController (button) {
   if (button === "home-btn") {
     loadHome();
   } else if (button === "menu-btn") {
-    // loadMenu();
+    loadMenu();
   } else if (button === "contact-btn") {
-    // loadContact();
+    loadContact();
   }
 }
 
