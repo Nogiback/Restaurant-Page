@@ -102,6 +102,13 @@ button:active {
   top: 2px;
 }
 
+.active {
+  color: var(--blue);
+  border-color: var(--blue);
+  transition: 0.3s ease;
+  bottom: 2px;
+}
+
 /*------------------------------------- HOMEPAGE ----------------------------------------*/
 
 .homepage {

@@ -30,6 +30,7 @@ function createHeader () {
   homeBtn.setAttribute("id", "home-btn");
   homeBtn.textContent = "HOME";
   homeBtn.addEventListener("click", (e) => {
+    setActiveButton(homeBtn);
     navController(e.target.id);
   });
 
@@ -38,6 +39,7 @@ function createHeader () {
   menuBtn.setAttribute("id", "menu-btn");
   menuBtn.textContent = "MENU";
   menuBtn.addEventListener("click", (e) => {
+    setActiveButton(menuBtn);
     navController(e.target.id);
   });
 
@@ -46,6 +48,7 @@ function createHeader () {
   contactBtn.setAttribute("id", "contact-btn");
   contactBtn.textContent = "CONTACT";
   contactBtn.addEventListener("click", (e) => {
+    setActiveButton(contactBtn);
     navController(e.target.id);
   });
 
@@ -57,6 +60,17 @@ function createHeader () {
   header.appendChild(navBar);
 
   return header;
+}
+
+function setActiveButton (button) {
+  const navButtons = document.querySelectorAll(".nav-btn");
+
+  navButtons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove("active");
+    }
+  });
+  button.classList.add("active");
 }
 
 function createFooter () {
